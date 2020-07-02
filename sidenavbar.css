@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+header .menu-btn {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  z-index: 2;
+  font-size: 24px;
+  margin: 2px 5px;
+  background-color: rgba(100, 100, 100, 0.5);
+  border: none;
+  text-align: center;
+  line-height: 35px;
+}
+
+#show-hide-menu-button {
+  display: none;
+}
+
+#expand-collapse-menu-button {
+  display: none;
+}
+
+nav {
+  position: fixed;
+  z-index: 1;
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a span {
+  margin-left: 5px;
+}
+
+section {
+  height: 400px;
+  border: 1px solid black;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+  body {
+    background: #0f0;
+  }
+  #expand-collapse {
+    display: none;
+  }
+  header #show-hide {
+    float: left;
+  }
+  header #show-hide i.fa-bars {
+    display: inline;
+  }
+  header #show-hide i.fa-times {
+    display: none;
+  }
+  nav {
+    display: none;
+    width: 100%;
+    font-size: 24px;
+  }
+  nav ul {
+    text-align: center;
+    background-color: rgba(100, 100, 100, 0.5);
+  }
+  main {
+    margin-top: 40px;
+  }
+  #show-hide-menu-button:checked~header #show-hide {
+    float: right;
+  }
+  #show-hide-menu-button:checked~header #show-hide i.fa-bars {
+    display: none;
+  }
+  #show-hide-menu-button:checked~header #show-hide i.fa-times {
+    display: inline;
+  }
+  #show-hide-menu-button:checked~nav {
+    display: block;
+  }
+}
+
+/* Tablet */
+
+@media screen and (min-width: 601px) and (max-width: 979px) {
+  body {
+    background: #55f;
+  }
+  header {
+    width: 45px;
+  }
+  header #show-hide {
+    float: left;
+  }
+  header #show-hide i.fa-bars {
+    display: none;
+  }
+  header #show-hide i.fa-times {
+    display: inline;
+  }
+  nav {
+    top: 80px;
+    width: 45px;
+    font-size: 24px;
+    transition: 0.5s;
+    transition-property: width;
+    overflow: hidden;
+  }
+  nav ul {
+    width: 45px;
+  }
+  nav a span {
+    display: none;
+  }
+  main {
+    margin-left: 45px;
+    transition: 0.5s;
+    transition-property: margin-left;
+  }
+  #show-hide-menu-button:checked~header #show-hide i.fa-bars {
+    display: inline;
+  }
+  #show-hide-menu-button:checked~header #show-hide i.fa-times {
+    display: none;
+  }
+  #show-hide-menu-button:checked~header #expand-collapse {
+    display: none;
+  }
+  #show-hide-menu-button:checked~nav {
+    display: none;
+  }
+  #expand-collapse-menu-button:checked~header #expand-collapse i {
+    transform: rotateY(180deg);
+  }
+  #expand-collapse-menu-button:checked~header {
+    width: 110px;
+  }
+  #expand-collapse-menu-button:checked~nav {
+    top: 40px;
+    width: 110px;
+    font-size: 18px;
+  }
+  #expand-collapse-menu-button:checked~nav ul {
+    width: 110px;
+  }
+  #expand-collapse-menu-button:checked~nav a span {
+    display: inline;
+  }
+  #expand-collapse-menu-button:checked~main {
+    margin-left: 110px;
+  }
+  #show-hide-menu-button:checked~main {
+    margin-left: 0;
+  }
+  #expand-collapse {
+    float: right;
+  }
+}
+
+/* Desktop */
+
+@media screen and (min-width: 980px) {
+  body {
+    background: #f55;
+  }
+  #show-hide {
+    display: none;
+  }
+  #expand-collapse {
+    display: none;
+  }
+  nav {
+    top: 0;
+    width: 110px;
+  }
+  main {
+    margin-left: 110px;
+  }
+}
