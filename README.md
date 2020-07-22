@@ -1,7 +1,7 @@
 usage:
 ```html
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://dimasorokin1987.github.io/sidenavbar/sidenavbar.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dimasorokin1987/sidenavbar@v0.1.0/sidenavbar.css">
 ...
 <input id="expand-collapse-menu-button" type="checkbox" />
 <input id="show-hide-menu-button" type="checkbox" />
